@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "Max",
+      "setup": "",
+      "run": "make test",
+      "input": "9\r\n12 15 16 13 18 19 20 11 21\r\n1\r\n",
+      "output": "21",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "min",
+      "setup": "",
+      "run": "make test",
+      "input": "9\r\n12 15 16 13 18 19 20 11 21\r\n1\r\n",
+      "output": "11",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Mean",
+      "setup": "",
+      "run": "make test",
+      "input": "9 \r\n12 15 16 13 18 19 20 11 21 \r\n2",
+      "output": "16.11",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "second smallest",
+      "setup": "",
+      "run": "make test",
+      "input": "9 \r\n12 15 16 13 18 19 20 11 21 \r\n3",
+      "output": "12",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "longest sub",
+      "setup": "",
+      "run": "make test ",
+      "input": "9 \r\n12 15 16 13 18 19 20 11 21 \r\n4",
+      "output": "13 18 19 20",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    }
+  ]
+}
