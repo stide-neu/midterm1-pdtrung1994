@@ -17,27 +17,84 @@ int a[100];
 void get_input()
 {
     printf("n=");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
     //TODO
 }
 void print_output()
 {
-    //TODO
+    printf("n= %d \n",n);
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n");
 }
 void array_minmax()
 {
-    //TODO
+    int min = a[0]; 
+    int max = a[0];
+    for(int i=0;i<n;i++)
+    {
+        if (a[i]<min) min = a[i];
+        if (a[i]>max) max = a[i];
+    }
+    printf("Max = %d, Min = %d", max, min);
 }
 void array_mean()
 {
-    //TODO
+    int sum = 0;
+    for(int i=0;i<n;i++)
+    {
+        // sum = sum + a[i];
+        sum += a[i];
+    }
+    float mean = (float)sum/n; 
+    printf("MEAN = %f", mean);
 }
 void second_smallest()
 {
-    //TODO
+    int min = a[0];
+    int min_2nd = a[0];
+    for (int i=0; i<n; i++)
+    {
+        if (a[i]<min)
+        {
+            min_2nd = min;
+            min = a[i];
+        }
+    }
+    printf("Second Smallest = %d", min_2nd);
 }
 void longest_sub()
 {
-    //TODO
+    int max_inc = 1;
+    int inc = 1;
+    int pos = 0;
+    for (int i =1; i<n; i++)
+    {
+        if (a[i]>a[i-1]) inc++;
+        else 
+        {
+            if (inc>max_inc)
+            {
+                max_inc = inc;
+                pos = i-inc;
+            }
+            inc =1;
+        }
+    }
+    //Kiem tra day tang dan cuoi cung
+    if (inc>max_inc)
+        {
+            max_inc = inc;
+            pos = n-inc;
+        }
+    for (int i = pos; i<pos+max_inc ; i++)
+        printf("%d ", a[i]);
 } 
 int main()
 {
@@ -46,7 +103,7 @@ int main()
     int task= -1;
     while (task != 0)
     {
-        printf("Select task = ");
+        printf("\n Select task = ");
         scanf("%d",&task);
         switch(task)
         {
