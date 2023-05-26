@@ -58,14 +58,16 @@ void array_mean()
 void second_smallest()
 {
     int min = a[0];
-    int min_2nd = a[0];
+    int min_2nd = 999999;
     for (int i=0; i<n; i++)
     {
         if (a[i]<min)
-        {
-            min_2nd = min;
             min = a[i];
-        }
+    }
+    for (int i=0; i<n; i++)
+    {
+        if (a[i]<min_2nd && a[i]!=min)
+            min_2nd = a[i];
     }
     printf("Second Smallest = %d", min_2nd);
 }
